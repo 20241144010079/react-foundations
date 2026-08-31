@@ -11,7 +11,6 @@
       }
     </script>
 
-    <!-- Babel Standalone -->
     <script src="https://unpkg.com/@babel/standalone@latest/babel.min.js"></script>
   </head>
 
@@ -27,9 +26,13 @@
       import { createRoot } from 'react-dom/client';
 
       const domNode = document.getElementById('app');
-      const root = createRoot(domNode);
 
-      root.render(<h1>Develop. Preview. Ship.</h1>);
+      function Header() {
+        return <h1>Develop. Preview. Ship.</h1>;
+      }
+
+      const root = createRoot(domNode);
+      root.render(<Header />);
     </script>
   </body>
 </html>
